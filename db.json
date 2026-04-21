@@ -50,6 +50,24 @@
       "confirmPassword": "12345678",
       "role": "user",
       "id": 6
+    },
+    {
+      "firstName": "noor",
+      "lastName": "ahmed",
+      "email": "noor@shopzone.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "firstName": "ali",
+      "lastName": "ahmed",
+      "email": "ali@shopzone.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "role": "user",
+      "id": 8
     }
   ],
   "products": [
@@ -275,6 +293,33 @@
       "price": 499,
       "image": "https://assets.theplace.com/image/upload/t_pdp_img_m,f_auto,q_auto/v1/ecom/assets/products/tcp/3044493/3044493_026.jpg",
       "id": 8
+    },
+    {
+      "userId": 1,
+      "productId": 10,
+      "quantity": 7,
+      "name": "PATPAT Girl's Basic Denim Jacket with Flap Pocket Button",
+      "price": 400,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.-blR12CVAmYdmfpAded0bQHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "productId": 3,
+      "quantity": 3,
+      "name": "TACVASEN Men's Bomber Jacket Lightweight Casual Spring Fall Windbreaker Zip Up Coat with Pocket",
+      "price": 2500,
+      "image": "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "productId": 3,
+      "quantity": 2,
+      "name": "TACVASEN Men's Bomber Jacket Lightweight Casual Spring Fall Windbreaker Zip Up Coat with Pocket",
+      "price": 2500,
+      "image": "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop",
+      "id": 11
     }
   ],
   "orders": [
@@ -340,6 +385,48 @@
       "orderDate": "2026-04-21T18:37:03.668Z",
       "status": "processing",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "name": "Apple iPhone 14 Pro Max, 128GB, Space Black - Locked to T-Mobile",
+          "quantity": 1,
+          "price": 45000
+        },
+        {
+          "productId": 4,
+          "name": "Silver Gold Bracelets for Women Trendy 14K Gold Plated Bracelet for Women Non Tarnish Dainty Stackable Layered Chain Heart Pearl Knot Beaded Bracelets Stack Set Charm Mothers Day Jewelry Gifts",
+          "quantity": 2,
+          "price": 1200
+        }
+      ],
+      "total": 47400,
+      "orderDate": "2026-04-21T21:54:10.979Z",
+      "status": "cancelled",
+      "id": 4
+    },
+    {
+      "userId": 8,
+      "items": [
+        {
+          "productId": 4,
+          "name": "Silver Gold Bracelets for Women Trendy 14K Gold Plated Bracelet for Women Non Tarnish Dainty Stackable Layered Chain Heart Pearl Knot Beaded Bracelets Stack Set Charm Mothers Day Jewelry Gifts",
+          "quantity": 1,
+          "price": 1200
+        },
+        {
+          "productId": 5,
+          "name": "Round Coffee Table, 2-Tier Espresso Wood Living Room Table with Storage Open Shelf, Industrial Round Table with Metal Legs for Living Room",
+          "quantity": 2,
+          "price": 3000
+        }
+      ],
+      "total": 7200,
+      "orderDate": "2026-04-21T22:06:21.737Z",
+      "status": "cancelled",
+      "id": 5
     }
   ]
 }

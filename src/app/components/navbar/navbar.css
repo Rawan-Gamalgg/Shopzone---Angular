@@ -60,7 +60,6 @@
     color: #986a1b;
   }
   
-  /* hamburger button - مخفي على desktop */
   .hamburger {
     display: none;
     flex-direction: column;

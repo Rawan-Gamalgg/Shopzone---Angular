@@ -26,7 +26,7 @@ export const AuthInterceptor: HttpInterceptorFn = (req, next) => {
           localStorage.setItem('userId', user.id.toString());
           localStorage.setItem('currentUser', JSON.stringify(user));
           
-          console.log('✅ User data saved from interceptor:', user);
+          console.log(' User data saved from interceptor:', user);
         }
       }
     })

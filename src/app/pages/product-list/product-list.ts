@@ -44,8 +44,15 @@ export class ProductList implements OnInit {
   }
   
   extractCategories() {
-    const uniqueCategories = [...new Set(this.allProducts.map(p => p.category))];
-    this.categories = ['All', ...uniqueCategories];
+    const categories: string[] = [];
+    
+    for (let product of this.allProducts) {
+      if (!categories.includes(product.category)) {
+        categories.push(product.category);
+      }
+    }
+    
+    this.categories = ['All', ...categories];
   }
   
   filterProducts() {
