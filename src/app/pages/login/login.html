@@ -1,0 +1,86 @@
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+      <!-- Left: image + branding -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center text-white p-4 left-container">
+        <div class="text-center text-white">
+          
+          Latest fashion 
+          <div class="mb-4 ">
+           
+           <h3 class="logo">
+            <i class="fa fa-shopping-cart text-white " aria-hidden="true"></i>
+            Shopzone
+            </h3>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 d-flex align-items-center justify-content-center py-4  right-container">
+        <div class="card border-0 shadow-lg p-4 " style="width: 100%; max-width: 450px;">
+          <h1 class="h3 mb-3 fw-bold">Log in to your account</h1>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  
+            <!-- Email -->
+            <div class="mb-4">
+              <label class="form-label py-1">Email</label>
+              <input type="text" class="form-control px-3 py-2" 
+                     placeholder="Enter your email" formControlName="email">
+          
+              <div class="text-danger bg-danger-subtle p-2 rounded" 
+                   *ngIf="hasError('email', 'required')">
+                Email is required.
+              </div>
+          
+              <div class="text-danger bg-danger-subtle p-2 rounded" 
+                   *ngIf="hasError('email', 'email')">
+                Enter a valid email address.
+              </div>
+          
+              <div class="text-danger bg-danger-subtle p-2 rounded" 
+                   *ngIf="hasError('email', 'emailNotFound')">
+                No account found with this email.
+              </div>
+            </div>
+          
+            <!-- Password -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <label class="form-label py-1">Password</label>
+                <a href="#" class="small text-decoration-none py-1">Forgot password?</a>
+              </div>
+              <input type="password" class="form-control px-3 py-2" 
+       formControlName="password">
+
+<!-- Password required -->
+<div class="text-danger bg-danger-subtle p-2 rounded" 
+     *ngIf="hasError('password', 'required')">
+  Password is required.
+</div>
+
+<!-- Wrong password -->
+<div class="text-danger bg-danger-subtle p-2 rounded" 
+     *ngIf="hasError('password', 'wrongPassword')">
+  Incorrect password.
+</div>
+            </div>
+
+          
+            <button type="submit" [disabled]="loginForm.invalid" 
+                    class="btn btn-login w-100 py-2 mb-3">Log In</button>
+          </form>
+
+    
+          <div class="text-center my-2">or</div>
+  
+          <button class="btn btn-outline-dark w-100 mb-2"><i class="fab fa-google text-white"></i> Continue with Google</button>
+  
+          <hr class="my-4">
+          <div class="d-flex justify-content-between">
+            <span>New to Shopzone? <a routerLink="/register" class="text-decoration-none fw-bold">Sign up</a></span>
+            <a routerLink="notfound" class="text-decoration-none">Get help</a>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>

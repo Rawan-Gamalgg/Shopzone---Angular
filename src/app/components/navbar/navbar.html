@@ -1,0 +1,36 @@
+<!-- navbar.html -->
+<nav class="px-4 py-2 text-secondary" >
+  <h3><i class="fa fa-shopping-cart"></i> Shopzone</h3>
+
+  <button class="hamburger" (click)="toggleDropdown($event)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul>
+    <div class="nav-links" [class.open]="isMenuOpen">
+      <a routerLink="/home" routerLinkActive="active" (click)="isMenuOpen=false">Home</a>
+      <a routerLink="/products" (click)="isMenuOpen=false">Shop</a><!--drop dowm menu contains categories-->
+      <a href="/home#contact" (click)="isMenuOpen=false">Contact</a>
+
+      <a routerLink="/dashboard" 
+         *ngIf="currentUser?.role === 'admin'"
+         (click)="isMenuOpen=false">Dashboard</a>
+
+      <a routerLink="/login" 
+         *ngIf="!currentUser"
+         (click)="isMenuOpen=false">Login</a>
+      <a routerLink="/register" 
+         *ngIf="!currentUser"
+         (click)="isMenuOpen=false">Register</a>
+    </div>
+
+
+    <div class="profile-container" *ngIf="currentUser">
+      <app-drop-down-menu></app-drop-down-menu>
+    </div>
+
+    <i class="fa fa-search"></i>
+  </ul>
+</nav>

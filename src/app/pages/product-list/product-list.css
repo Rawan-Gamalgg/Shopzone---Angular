@@ -1,0 +1,21 @@
+img,.category,.product-name{
+    cursor:pointer;
+}
+.category {
+    background-color: #f8f6f3;
+    border-radius: 22px;
+    text-decoration: none;
+    color:black;
+    padding:10px 20px;
+
+}
+
+.category:hover{
+transform: translateY(-3px);
+background-color: #dbd5c7;
+}
+
+
+.zoom:hover {
+    transform: scale(1.09); 
+  }

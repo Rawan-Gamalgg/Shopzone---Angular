@@ -1,0 +1,89 @@
+<div class="container" *ngIf="product">
+  <button routerLink="/products" class="btn btn-secondary mb-3">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Go Back
+  </button>
+
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="product.image[mainImageIndex] || product.image || 'https://placehold.co/580x650?text=Product'" 
+           alt="product image" 
+           class="img-fluid" 
+           width="580px" 
+           height="650px" />
+    </div>
+
+    <div class="col-md-6">
+      <h2 class="text-uppercase text-secondary w-75">{{ product.name }}</h2>
+      <p (click)="getByCategory(product.category)" class="category text-uppercase" style="cursor: pointer;">
+        {{ product.category }}
+      </p>
+      <p><strong>Price:</strong> {{ product.price | currency:'EGP' }}</p>
+      
+      <div class="rating-container d-flex align-items-center gap-2">
+        <p class="mb-0"><strong>Rating:</strong></p>
+        <div class="ratings">
+          <i *ngFor="let starType of getStarArray(product.rating)" 
+             [class]="starType === 'full' ? 'fa fa-star text-warning' : 
+                      starType === 'half' ? 'fa fa-star-half-o text-warning' : 
+                      'fa fa-star-o text-secondary'">
+          </i>
+        </div>
+        <span class="small text-muted">({{ product.rating }})</span>
+      </div>
+      
+      <p><strong>Stock:</strong> {{ product.stock }} units</p>
+
+      <div class="d-flex gap-2 mt-3" *ngIf="product.image.length > 1">
+        <div *ngFor="let img of product.image; let i = index">
+          <img [src]="img" (click)="changeMainImage(i)" 
+               class="thumbnail zoom" 
+               width="100" 
+               height="100" 
+               style="cursor: pointer; object-fit: cover; border-radius: 8px;" 
+               [class.border-danger]="mainImageIndex === i" 
+               [class.border]="mainImageIndex === i" 
+               [class.border-2]="mainImageIndex === i" />
+        </div>
+      </div>
+
+      <div *ngIf="product.stock === 0" class="alert alert-danger mt-3">
+        <i class="fa fa-times-circle"></i> Out of Stock
+      </div>
+
+      <div *ngIf="product.stock > 0" class="mt-3">
+        <label class="fw-semibold">Quantity:</label>
+        <div class="d-flex align-items-center gap-2 mt-1">
+          <button class="btn btn-outline-secondary btn-sm" (click)="quantity = quantity - 1; onQuantityChange()" [disabled]="quantity <= 1">
+            <i class="fa fa-minus"></i>
+          </button>
+          <input type="number" 
+                 [(ngModel)]="quantity" 
+                 (ngModelChange)="onQuantityChange()"
+                 min="1" 
+                 [max]="product.stock" 
+                 class="form-control text-center" 
+                 style="width: 80px;" />
+          <button class="btn btn-outline-secondary btn-sm" (click)="quantity = quantity + 1; onQuantityChange()" [disabled]="quantity >= product.stock">
+            <i class="fa fa-plus"></i>
+          </button>
+        </div>
+        <div *ngIf="quantityError" class="text-danger small mt-1">
+          <i class="fa fa-exclamation-circle"></i> {{ quantityError }}
+        </div>
+        <button class="btn btn-dark d-block w-50 my-3 py-2" 
+                (click)="addToCart(product)" 
+                [disabled]="quantity < 1 || quantity > product.stock">
+          <i class="fa fa-shopping-cart me-2"></i> ADD TO CART
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!product" class="text-center mt-5">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading product...</span>
+  </div>
+  <p class="text-muted mt-2">Loading product details...</p>
+</div>

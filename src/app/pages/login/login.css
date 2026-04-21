@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+       color:#1f1a14;
+
+}
+/* div{
+        background-color: #ece8de;
+
+} */
+
+.left-container{
+    background-image: url("/assets/cover-page.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.logo{
+    background-color:#986a1b;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: white;
+
+}
+.btn-login{
+    color: #c0831b;
+    border: 1px solid #c0831b ;
+    border-radius: 15px;
+
+}
+.btn-login:hover{
+    background-color:#c0831b;
+    color: white;
+    border-radius: 15px;
+}
+
+/*right container*/
+.right-container{
+    background-color: #fefbf4;
+}

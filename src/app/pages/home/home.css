@@ -1,0 +1,104 @@
+
+.hero-Section{
+    background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85');
+}
+.hero-Section{
+    background-color: #837960;
+    background-image: linear-gradient(
+      to bottom, transparent, rgba(0, 0, 0, 0.941)
+        ), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85');
+
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+}
+.hero-text{
+    color: #ffffffa0;
+    font-size: 1.5rem;
+    padding-top:150px;
+    text-align: center;
+}
+.hero-Section h5{
+    letter-spacing: .5rem;
+    /*want to make it upper case*/
+    text-transform: uppercase;
+    color: #ffffff85;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 170px;
+}
+.hero-Section h1{
+    width: 70%;
+    margin: 0 auto;
+    color: #ffffffcf;
+    font-size: 6rem;
+    font-weight: 600;
+    padding-top: 80px;
+    letter-spacing: 2px;
+}
+.hero-text p{
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    color: #ffffff7a;
+}
+ a{
+    text-decoration: none;
+    color: #ffffffa7;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #ffffffa7;
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+}
+.shop-now-btn{
+    background-color: transparent;
+    background-color: #a80c18;
+    color: #ffffffa7;
+    border: 2px solid #a80c18;
+    /* #986a1b */
+}
+.shop-now-btn:hover{
+    background-color: #ffffffa7;
+    color: #a80c18;
+    border: 2px solid #ffffffa7;
+}
+.login-btn:hover{
+    background-color: #ffffffa7;
+    color: #a80c18;
+    border: 2px solid #ffffffa7;
+ 
+}
+
+
+/**Featured **/
+.featured-section{
+    padding: 50px 20px;
+}
+.featured-section h2{
+    color: #986a1b;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'lateef', serif;
+}
+.featured-section p{
+    color: #78716d;
+    font-size: 1.2rem;
+    width: 40%;
+    display: inline;
+    padding-bottom: 30px;
+}
+.show-all-btn{
+    color: #986a1b;
+    font-size: 1.2rem;
+    text-align: end;
+    display: block;
+        
+}
+.zoom:hover {
+    transform: scale(1.09); 
+  }

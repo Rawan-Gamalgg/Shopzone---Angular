@@ -1,0 +1,122 @@
+<!-- PROFILE PAGE - نفس تصميم CART و ORDERS -->
+<div class="container profile-container" *ngIf="user">
+    <button routerLink="/products" class="btn btn-secondary mb-3">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Go Back
+    </button>
+  
+    <div class="row g-4 d-flex align-items-baseline">
+      <!-- Left column: profile info -->
+      <div class="col-lg-8 border-top border-1 rounded shadow-sm">
+        <div class="profile-card p-2 p-md-4">
+          <div class="d-flex justify-content-between align-items-center flex-wrap mb-3 ">
+            <h4 class="mb-0 text-muted text-uppercase  border-bottom py-3 ">
+              <i class="fa fa-user-circle me-2 " aria-hidden="true"></i>
+              MY PROFILE
+            </h4>
+          </div>
+  
+          <!-- Profile content -->
+          <div class="profile-content">
+            <!-- Avatar Section -->
+            <div class="text-center mb-4">
+              <div class="avatar-circle mx-auto">
+              </div>
+              <h5 class="mt-3 mb-1">{{ user.firstName + " " + user.lastName}}</h5>
+              <span class="badge" [ngClass]="{
+                'bg-success text-white': user.role === 'admin',
+                'bg-secondary text-white': user.role === 'user'
+              }">
+                {{ user.role | uppercase }}
+              </span>
+            </div>
+  
+            <!-- User Details Table -->
+            <div class="user-details">
+              <div class="detail-row border-bottom py-3">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span class="text-muted">
+                      <i class="fa fa-id-card me-2" aria-hidden="true"></i>
+                      User ID:
+                    </span>
+                  </div>
+                  <div class="col-md-8">
+                    <strong class="text-dark">{{ user.id }}</strong>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="detail-row border-bottom py-3">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span class="text-muted">
+                      <i class="fa fa-envelope me-2" aria-hidden="true"></i>
+                      Email Address:
+                    </span>
+                  </div>
+                  <div class="col-md-8">
+                    <strong class="text-dark">{{ user.email }}</strong>
+                  </div>
+                </div>
+              </div>
+  
+           
+              <div class="detail-row py-3">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span class="text-muted">
+                      <i class="fa fa-calendar me-2" aria-hidden="true"></i>
+                      Member Since:
+                    </span>
+                  </div>
+                  <div class="col-md-8">
+                    <strong class="text-dark">{{ getMemberSince() }}</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right column-->
+      <div class="col-lg-4">
+        <div class="action-card p-3 p-md-4 border rounded bg-white">
+          
+          <div class="action-buttons">
+            <button class="btn btn-outline-warning w-100 mb-3 py-2" routerLink="/orders">
+              <i class="fa fa-shopping-bag me-2" aria-hidden="true"></i>
+              My Orders
+            </button>
+            
+            <button class="btn btn-outline-secondary w-100 mb-3 py-2" routerLink="/cart">
+              <i class="fa fa-shopping-cart me-2" aria-hidden="true"></i>
+              My Cart
+            </button>
+            
+            <button class="btn btn-outline-info w-100 mb-3 py-2" routerLink="/products">
+              <i class="fa fa-store me-2" aria-hidden="true"></i>
+              Continue Shopping
+            </button>
+            <button class="btn btn-danger w-100 mb-3 py-2" (click)="logout()">
+              <i class="fa fa-store me-2" aria-hidden="true"></i>
+              Logout            
+      </button>
+            <hr class="my-3">
+            
+           
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Loading state -->
+  <div *ngIf="!user" class="container text-center py-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="text-muted mt-3">Loading profile information...</p>
+  </div>

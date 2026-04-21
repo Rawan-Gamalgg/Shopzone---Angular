@@ -1,0 +1,99 @@
+<div class="container cart-container" *ngIf="orders">
+    <button routerLink="/products" class="btn btn-secondary mb-3">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Go Back
+    </button>
+  
+    <div class="row g-4 d-flex align-items-baseline">
+      <!-- Left column: orders list -->
+      <div class="col-lg-12 border-top border-1 rounded shadow-sm">
+        <div class="cart-card p-2 p-md-4">
+          <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+            <h4 class="mb-0 text-muted text-uppercase border-bottom py-3">
+               Orders History(<span>{{ orders.length }}</span>)
+            </h4>
+          </div>
+  
+          <!-- No orders message -->
+          <div *ngIf="orders.length === 0" class="text-center py-5">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <p class="text-muted">You haven't placed any orders yet</p>
+            <a routerLink="/products" class="btn btn-dark">Browse Products</a>
+          </div>
+  
+          <!-- Orders list -->
+          <div *ngIf="orders.length > 0">
+            <!-- Order card loop -->
+            <div *ngFor="let order of orders" class="order-card border rounded mb-4 p-3">
+              <!-- Order header -->
+              <div class="d-flex justify-content-between align-items-center flex-wrap border-bottom pb-2 mb-3">
+                <div>
+                  <span class="fw-bold text-muted">Order #{{ order.id }}</span>
+                  <span class="mx-2 text-secondary">|</span>
+                  <span class="text-secondary">{{ order.orderDate | date:'medium' }}</span>
+                </div>
+                <div>
+                  <span class="badge" [ngClass]="{
+                    'bg-warning text-dark': order.status === 'pending',
+                    'text-info': order.status === 'processing',
+                    'text-success': order.status === 'delivered',
+                    'text-danger': order.status === 'cancelled'
+                  }" >
+                    {{ order.status | uppercase }}
+                  </span>
+                  <button *ngIf="order.status === 'pending' || order.status === 'processing'"
+                  class="btn btn-sm btn-outline-danger text-s" 
+                  (click)="cancelOrder(order)">
+            <i class="fas fa-times me-1"></i> Cancel
+          </button>
+                </div>
+              </div>
+  
+              <!-- Order items table -->
+              <div class="table-responsive">
+                <table class="table table-sm">
+                  <thead>
+                    <tr class="text-secondary">
+                      <th>PRODUCT</th>
+                      <th class="text-center">QUANTITY</th>
+                      <th class="text-end">PRICE</th>
+                      <th class="text-end">TOTAL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of order.items">
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                         
+                          <span class="text-muted">{{ item.name }}</span>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <span class="fw-semibold">x{{ item.quantity }}</span>
+                      </td>
+                      <td class="text-end">{{ item.price | currency:'EGP' }}</td>
+                      <td class="text-end fw-bold text-muted">{{ item.price * item.quantity | currency:'EGP' }}</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="border-top">
+                      <td colspan="3" class="text-end fw-bold">Total:</td>
+                      <td class="text-end fw-bold text-danger">{{ order.total | currency:'EGP' }}</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+  
+              <!-- Expandable section (optional - shows shipping info if exists) -->
+              <div *ngIf="order.shippingInfo" class="mt-2 pt-2 border-top">
+                <small class="text-muted">
+                  <i class="fas fa-truck me-1"></i>
+                  Shipped to: {{ order.shippingInfo.address }}, {{ order.shippingInfo.city }}
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,110 @@
+/* navbar.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f8f6f2f1;
+    z-index: 1000;
+    border-bottom: 1px solid #e8e5e0df;
+  }
+  
+  /* Logo */
+  nav h3 {
+    color: #986a1b;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    flex: 1; 
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    padding-right: 70px;
+    align-items: center;
+    justify-content: center;
+    flex: 2; 
+  }
+  
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 3; 
+  }
+
+ 
+  
+  
+  nav a {
+    text-decoration: none;
+    color: #211e1c;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "outfit", sans-serif;
+    white-space: nowrap;
+  }
+  
+  nav a:hover {
+    color: #986a1b;
+  }
+  
+  /* hamburger button - مخفي على desktop */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #211e1c;
+    transition: all 0.3s;
+  }
+
+ 
+  
+  /* ===== Mobile ===== */
+  @media (max-width: 768px) {
+    
+    .hamburger {
+      display: flex; 
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #f8f6f2f1;
+      padding: 16px 50px;
+      border-bottom: 1px solid #e8e5e0;
+      gap: 16px;
+    }
+      .nav-links.open {
+      display: flex;
+    }
+  
+    ul {
+      gap: 12px;
+    }
+  }

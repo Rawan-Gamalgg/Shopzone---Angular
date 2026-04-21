@@ -1,0 +1,14 @@
+<div class="profile" id="profileMenu">
+  <!-- <img src="https://via.placeholder.com/40" alt="Profile"> -->
+  <i class="fa fa-user">  </i> <span >
+   {{ currentUser?.firstName+" "+ currentUser?.lastName}}
+    </span>
+  <div class="dropdown" id="dropdownMenu">
+      <a routerLink="/profile">My Profile</a>
+      <a routerLink="/orders" *ngIf="currentUser && currentUser.role !== 'admin'">orders</a>
+      <a routerLink="/cart" *ngIf="currentUser && currentUser.role !== 'admin'">
+          <!-- <i class="fa fa-shopping-cart"></i> -->
+        cart</a>
+      <a routerLink="/login" (click)="logout()">Logout</a>
+  </div>
+</div>

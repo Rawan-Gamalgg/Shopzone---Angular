@@ -1,0 +1,104 @@
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+      <!-- Left: image + branding -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center text-white p-4 left-container">
+        <div class="text-center text-white">
+          
+          Latest fashion 
+          <div class="mb-4 ">
+           
+           <h3 class="logo">
+            <i class="fa fa-shopping-cart text-white " aria-hidden="true"></i>
+            Shopzone
+            </h3>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right: login form (complete) -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center py-4  right-container">
+        <div class="card border-0 shadow-lg px-4 py-2 " style="width: 100%; max-width: 450px;">
+          <h1 class="h3 mb-3 fw-bold">Create a new account</h1>
+  
+          <form class="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            <!-- First name -->
+            <div class="mb-2">
+                <label class="form-label py-1">First name</label>
+                <input type="text" class="form-control px-3 py-1" placeholder="Enter first name" formControlName="firstName">
+                <div class="text-danger bg-danger-subtle p-2 rounded" *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+                  first name is required.
+                </div>
+              </div>
+              
+               <!-- Last name -->
+            <div class="mb-2">
+              <label class="form-label py-1">Last name</label>
+              <input type="text" class="form-control px-3 py-1" placeholder="Enter last name" formControlName="lastName">
+              <div class="text-danger bg-danger-subtle p-2 rounded" *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+                last name is required.
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="mb-2">
+              <label class="form-label py-1">Email</label>
+              <input type="text" class="form-control px-3 py-1" placeholder="Enter your email" formControlName="email">
+                <!-- Error messages for email field -->
+  <div class="text-danger bg-danger-subtle p-2 rounded" *ngIf="hasError('email', 'required')">
+    Email is required.
+  </div>
+              <div 
+    class="text-danger bg-danger-subtle p-2 rounded" 
+    *ngIf="hasError('email', 'email')">
+    Enter a valid email address.
+  </div>
+              <div 
+              class="text-danger bg-danger-subtle p-2 rounded" 
+              *ngIf="hasError('email', 'emailExists')">
+              This email is already registered.
+            </div>
+            </div>
+            <!-- Password -->
+            <div class="mb-2">
+              <div class="d-flex justify-content-between">
+                <label class="form-label py-1">Password</label>
+              </div>
+              <input type="password" class="form-control px-3 py-1" formControlName="password">
+               <!-- Error messages for password field -->
+    <div class="text-danger bg-danger-subtle p-2 rounded" *ngIf="hasError('password', 'required')">
+      Password is required
+  </div>
+  <div  class="text-danger bg-danger-subtle p-2 rounded" *ngIf="hasError('password', 'minlength')">
+     Password must be at least 6 characters long
+  </div>
+
+            </div>
+            <!-- Confirm password -->
+             <div class="mb-2">
+              <div class="d-flex justify-content-between">
+                <label class="form-label py-1">Confirm password</label>
+              </div>
+              <input type="password" class="form-control px-3 py-2" formControlName="confirmPassword">
+          
+             <div class="text-danger bg-danger-subtle p-2 rounded" *ngIf="registerForm.errors?.['passwordMismatch'] && registerForm.get('confirmPassword')?.touched">
+              Passwords do not match.
+          </div>
+            </div>
+            <button type="submit" [disabled]="registerForm.invalid" class="btn btn-login w-100 py-2 mb-3">Register</button>
+          </form>
+    
+          <div class="text-center my-2">or</div>
+  
+          <button  class="btn btn-outline-dark w-100 mb-2"><i class="fab fa-google text-white"></i> Continue with Google</button>
+  
+          <hr class="my-4">
+          <div class="d-flex justify-content-between">
+            <span>Already have an account? <a routerLink="/login" class="text-decoration-none fw-bold">Log in</a></span>
+            <a routerLink="notfound" class="text-decoration-none">Get help</a>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+         

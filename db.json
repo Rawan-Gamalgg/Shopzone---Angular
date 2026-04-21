@@ -1,0 +1,345 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Ahmed",
+      "lastName": "Ali",
+      "email": "ahmed@shopzone.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "firstName": "Sara",
+      "lastName": "",
+      "email": "sara@shopzone.com",
+      "password": "12345678",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "firstName": "Mariam",
+      "lastName": "Gamal",
+      "email": "mariam@gmail.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "firstName": "Rawan",
+      "lastName": "Eldaly",
+      "email": "roro@shopzone.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "firstName": "Rawan",
+      "lastName": "Eldaly",
+      "email": "rorii@shopzone.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "firstName": "sara",
+      "lastName": "ahmed",
+      "email": "sara1@shopzone.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "role": "user",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 14 Pro Max, 128GB, Space Black - Locked to T-Mobile",
+      "price": 45000,
+      "category": "Electronics",
+      "stock": 10,
+      "rating": 4.8,
+      "image": [
+        "https://images.unsplash.com/photo-1663499482523-1c0c1bae4ce1?auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "SAMSUNG Galaxy S23 5G SM-S911B/DS 128GB 8GB RAM, 50 MP Camera, Blue",
+      "price": 38000,
+      "category": "Electronics",
+      "stock": 0,
+      "rating": 4.6,
+      "image": [
+        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop",
+        "https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/02/samsung-galaxy-s23-plus-colors.jpg",
+        "https://www.sammobile.com/wp-content/uploads/2023/03/Galaxy-S23-Ultra-Green-4.jpg",
+        "https://techbit.pt/wp-content/uploads/2023/01/samsung-s23-ultra-jpg.webp"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "TACVASEN Men's Bomber Jacket Lightweight Casual Spring Fall Windbreaker Zip Up Coat with Pocket",
+      "price": 2500,
+      "category": "Fashion",
+      "stock": 2,
+      "rating": 4.5,
+      "image": [
+        "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Silver Gold Bracelets for Women Trendy 14K Gold Plated Bracelet for Women Non Tarnish Dainty Stackable Layered Chain Heart Pearl Knot Beaded Bracelets Stack Set Charm Mothers Day Jewelry Gifts",
+      "price": 1200,
+      "category": "Fashion",
+      "stock": 20,
+      "rating": 4.3,
+      "image": [
+        "https://m.media-amazon.com/images/I/91+Pmzu7bqL._AC_SX679_.jpg",
+        "https://m.media-amazon.com/images/I/91FlXwSja0L._AC_SX679_.jpg",
+        "https://m.media-amazon.com/images/I/91m-s-ad8RL._AC_SX679_.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Round Coffee Table, 2-Tier Espresso Wood Living Room Table with Storage Open Shelf, Industrial Round Table with Metal Legs for Living Room",
+      "price": 3000,
+      "category": "Home",
+      "stock": 8,
+      "rating": 4.7,
+      "image": [
+        "https://m.media-amazon.com/images/I/91tacYay1LL._AC_.jpg",
+        "https://tse1.mm.bing.net/th/id/OIP.JiqCf2z4jtRMPO-V5ZS2YgHaHa?pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3",
+        "https://i2.wp.com/secure.img1-fg.wfcdn.com/im/63768272/resize-h800-w800%5Ecompr-r85/4411/44115433/Carolyn+Round+Coffee+Table.jpg",
+        "https://tse1.mm.bing.net/th/id/OIP.Zf-9ZJNx3rogVeIieCk5aQHaEl?pid=ImgDet&w=474&h=293&rs=1&o=7&rm=3"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Retrospec Solana Yoga Mat 1 Thick w/Nylon Strap for Men & Women - Non Slip Exercise Mat for Home Yoga, Pilates, Stretching, Floor & Fitness Workouts",
+      "price": 600,
+      "category": "Sports",
+      "stock": 25,
+      "rating": 4.4,
+      "image": [
+        "https://retrospec.com/cdn/shop/products/4431_1_1800x1800.jpg?v=1738874660"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Bluetooth Headphones Over Ear, 65 Hours Playtime Wireless Headphones with Microphone, Foldable Lightweight Headset with Deep Bass, HiFi Stereo Sound Low Latency for Travel Work Cellphone",
+      "price": 3500,
+      "category": "Electronics",
+      "stock": 12,
+      "rating": 4.9,
+      "image": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Dimmable Floor Lamp, 1000 Lumens LED Edison Bulb Included, Arc Floor Lamps for Living Room Modern Standing Lamp with Linen Shade, Tall Lamp for Bedroom Office Dining Room",
+      "price": 3500,
+      "category": "Home",
+      "stock": 12,
+      "rating": 4.9,
+      "image": [
+        "/assets/floor-lamp.png",
+        "/assets/floor-lamp1.png",
+        "/assets/floor-lamp2.png",
+        "/assets/floor-lamp3.png"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Pairxily Oversized Graphic Tshirts for Men Acid Wash Los Angeles Vintage Tees Streetwear Baggy Cotton Shirts Casual",
+      "price": 900,
+      "category": "Fashion",
+      "stock": 18,
+      "rating": 4.6,
+      "image": [
+        "https://i.factcool.com/catalog/products/11/a5/96/11-a5-9617ef387_org_zoom.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "PATPAT Girl's Basic Denim Jacket with Flap Pocket Button",
+      "price": 400,
+      "category": "Fashion",
+      "stock": 5,
+      "rating": 4.3,
+      "image": [
+        "https://tse2.mm.bing.net/th/id/OIP.-blR12CVAmYdmfpAded0bQHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/N39396s3.jpg?im=Resize"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Kids' Denim Floral Embroidered Bucket Hat",
+      "price": 950,
+      "category": "Fashion",
+      "stock": 14,
+      "rating": 4.6,
+      "image": [
+        "https://media.johnlewiscontent.com/i/JohnLewis/006864265?fmt=auto&$background-off-white$&$rsp-pdp-port-640$"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "The Children's Place Girls' Plaid Stretch Jacquard Short Sleeve Dress",
+      "price": 499,
+      "category": "Fashion",
+      "stock": 14,
+      "rating": 4.6,
+      "image": [
+        "https://assets.theplace.com/image/upload/t_pdp_img_m,f_auto,q_auto/v1/ecom/assets/products/tcp/3044493/3044493_026.jpg",
+        "https://i.pinimg.com/236x/10/1d/2f/101d2feedae6561500a9595e35c3b7ae.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "RUMIA Shift Dress for Women V Neck Ruffle Sleeve Loose Summer Office Work Casual Dress",
+      "price": 1599,
+      "category": "Fashion",
+      "stock": 7,
+      "rating": 4.8,
+      "discription": "V-Neck Floral Midi Dress",
+      "image": [
+        "https://dfcdn.defacto.com.tr/838/E4809AX_25SM_BN333_01_01.jpg",
+        "https://dfcdn.defacto.com.tr/838/E4809AX_25SM_BN333_02_01.jpg",
+        "https://dfcdn.defacto.com.tr/838/E4809AX_25SM_BN333_03_01.jpg"
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "userId": 4,
+      "productId": 8,
+      "quantity": 1,
+      "name": "Dimmable Floor Lamp, 1000 Lumens LED Edison Bulb Included, Arc Floor Lamps for Living Room Modern Standing Lamp with Linen Shade, Tall Lamp for Bedroom Office Dining Room",
+      "price": 3500,
+      "id": 2
+    },
+    {
+      "userId": 4,
+      "productId": 3,
+      "quantity": 4,
+      "name": "TACVASEN Men's Bomber Jacket Lightweight Casual Spring Fall Windbreaker Zip Up Coat with Pocket",
+      "price": 2500,
+      "image": "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop",
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "productId": 4,
+      "quantity": 1,
+      "name": "Silver Gold Bracelets for Women Trendy 14K Gold Plated Bracelet for Women Non Tarnish Dainty Stackable Layered Chain Heart Pearl Knot Beaded Bracelets Stack Set Charm Mothers Day Jewelry Gifts",
+      "price": 1200,
+      "image": "https://m.media-amazon.com/images/I/91+Pmzu7bqL._AC_SX679_.jpg",
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "productId": 6,
+      "quantity": 3,
+      "name": "Retrospec Solana Yoga Mat 1 Thick w/Nylon Strap for Men & Women - Non Slip Exercise Mat for Home Yoga, Pilates, Stretching, Floor & Fitness Workouts",
+      "price": 600,
+      "image": "https://retrospec.com/cdn/shop/products/4431_1_1800x1800.jpg?v=1738874660",
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "productId": 10,
+      "quantity": 6,
+      "name": "PATPAT Girl's Basic Denim Jacket with Flap Pocket Button",
+      "price": 400,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.-blR12CVAmYdmfpAded0bQHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "productId": 13,
+      "quantity": 2,
+      "name": "RUMIA Shift Dress for Women V Neck Ruffle Sleeve Loose Summer Office Work Casual Dress",
+      "price": 1599,
+      "image": "https://dfcdn.defacto.com.tr/838/E4809AX_25SM_BN333_01_01.jpg",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "productId": 12,
+      "quantity": 3,
+      "name": "The Children's Place Girls' Plaid Stretch Jacquard Short Sleeve Dress",
+      "price": 499,
+      "image": "https://assets.theplace.com/image/upload/t_pdp_img_m,f_auto,q_auto/v1/ecom/assets/products/tcp/3044493/3044493_026.jpg",
+      "id": 8
+    }
+  ],
+  "orders": [
+    {
+      "userId": 4,
+      "items": [
+        {
+          "productId": 8,
+          "name": "Dimmable Floor Lamp, 1000 Lumens LED Edison Bulb Included, Arc Floor Lamps for Living Room Modern Standing Lamp with Linen Shade, Tall Lamp for Bedroom Office Dining Room",
+          "quantity": 1,
+          "price": 3500
+        },
+        {
+          "productId": 9,
+          "name": "Pairxily Oversized Graphic Tshirts for Men Acid Wash Los Angeles Vintage Tees Streetwear Baggy Cotton Shirts Casual",
+          "quantity": 1,
+          "price": 900
+        }
+      ],
+      "total": 4400,
+      "orderDate": "2026-04-21T14:00:17.373Z",
+      "status": "cancelled",
+      "id": 1
+    },
+    {
+      "userId": 4,
+      "items": [
+        {
+          "productId": 2,
+          "name": "SAMSUNG Galaxy S23 5G SM-S911B/DS 128GB 8GB RAM, 50 MP Camera, Blue",
+          "quantity": 1,
+          "price": 38000
+        },
+        {
+          "productId": 1,
+          "name": "Apple iPhone 14 Pro Max, 128GB, Space Black - Locked to T-Mobile",
+          "quantity": 1,
+          "price": 45000
+        }
+      ],
+      "total": 83000,
+      "orderDate": "2026-04-21T15:35:14.782Z",
+      "status": "delivered",
+      "id": 2
+    },
+    {
+      "userId": 4,
+      "items": [
+        {
+          "productId": 4,
+          "name": "Silver Gold Bracelets for Women Trendy 14K Gold Plated Bracelet for Women Non Tarnish Dainty Stackable Layered Chain Heart Pearl Knot Beaded Bracelets Stack Set Charm Mothers Day Jewelry Gifts",
+          "quantity": 1,
+          "price": 1200
+        },
+        {
+          "productId": 8,
+          "name": "Dimmable Floor Lamp, 1000 Lumens LED Edison Bulb Included, Arc Floor Lamps for Living Room Modern Standing Lamp with Linen Shade, Tall Lamp for Bedroom Office Dining Room",
+          "quantity": 1,
+          "price": 3500
+        }
+      ],
+      "total": 4700,
+      "orderDate": "2026-04-21T18:37:03.668Z",
+      "status": "processing",
+      "id": 3
+    }
+  ]
+}
