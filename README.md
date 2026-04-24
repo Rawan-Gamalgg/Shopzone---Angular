@@ -7,7 +7,7 @@
 
 ---
 
-## 📖 About The Project
+##  About The Project
 
 **ShopZone** is a fully functional e-commerce web application built with **Angular 17**. It provides a complete shopping experience including product browsing, shopping cart management, order placement, user authentication with role-based access control (User/Admin), and a clean responsive UI.
 
@@ -15,9 +15,9 @@ This project was developed as a college graduation project and serves as a portf
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🔐 Authentication & Authorization
+###  Authentication & Authorization
 | Feature | Description |
 |---------|-------------|
 | Login | Email/password validation using Reactive Forms |
@@ -26,7 +26,7 @@ This project was developed as a college graduation project and serves as a portf
 | Route Protection | Auth Guards prevent unauthorized access |
 | Session | Persistence via localStorage |
 
-### 🛍️ Product Management
+###  Product Management
 | Feature | Description |
 |---------|-------------|
 | Product Grid | Responsive (3 cols desktop / 2 tablet / 1 mobile) |
@@ -35,7 +35,7 @@ This project was developed as a college graduation project and serves as a portf
 | Star Rating | Full, half, and empty stars display |
 | Dynamic Badges | "Top Seller" (rating > 4.7), "Almost Sold Out" (stock < 3), "Out of Stock" (stock = 0) |
 
-### 🛒 Shopping Cart
+###  Shopping Cart
 | Feature | Description |
 |---------|-------------|
 | Add to Cart | From product list or detail page |
@@ -44,7 +44,7 @@ This project was developed as a college graduation project and serves as a portf
 | Remove Item | SweetAlert2 confirmation dialog |
 | Toast Notifications | Success/error messages for all actions |
 
-### 📋 Order System
+###  Order System
 | Feature | Description |
 |---------|-------------|
 | Place Order | Convert cart items to order |
@@ -53,13 +53,13 @@ This project was developed as a college graduation project and serves as a portf
 | Order History | View all orders with expandable item details |
 | Status Badges | Color-coded for each status |
 
-### 👤 User Profile
+###  User Profile
 | Feature | Description |
 |---------|-------------|
 | View Profile | Name, email, role, user ID |
 | Logout | Clear localStorage and redirect to login |
 
-### 👑 Admin Dashboard
+###  Admin Dashboard
 | Feature | Description |
 |---------|-------------|
 | Access Control | Only visible to users with admin role |
@@ -74,7 +74,7 @@ This project was developed as a college graduation project and serves as a portf
 |------------|-------|
 | Angular 21 | Core framework |
 | TypeScript | Programming language  |
-| RxJS | Async operations, Observables, BehaviorSubject |
+| RxJS | Async operations, Observables |
 | Reactive Forms | Login & Register forms |
 | Template-Driven Forms | Cart quantity editing |
 | HTTP Client | API communication |
