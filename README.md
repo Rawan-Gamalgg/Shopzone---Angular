@@ -64,7 +64,6 @@ This project was developed as a college graduation project and serves as a portf
 |---------|-------------|
 | Access Control | Only visible to users with admin role |
 | Quick Actions | Add, delete, update products |
-| Statistics | Quick stats cards |
 
 ---
 
