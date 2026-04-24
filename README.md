@@ -1,6 +1,6 @@
 # 🛍️ ShopZone - E-Commerce Angular Application
 
-[![Angular](https://img.shields.io/badge/Angular-17-red.svg)](https://angular.io/)
+[![Angular](https://img.shields.io/badge/Angular-21-red.svg)](https://angular.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple.svg)](https://getbootstrap.com/)
 [![Status](https://img.shields.io/badge/status-completed-green.svg)]()
