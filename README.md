@@ -9,7 +9,7 @@
 
 ##  About The Project
 
-**ShopZone** is a fully functional e-commerce web application built with **Angular 17**. It provides a complete shopping experience including product browsing, shopping cart management, order placement, user authentication with role-based access control (User/Admin), and a clean responsive UI.
+**ShopZone** is a fully functional e-commerce web application built with **Angular 21**. It provides a complete shopping experience including product browsing, shopping cart management, order placement, user authentication with role-based access control (User/Admin), and a clean responsive UI.
 
 This project was developed as a college graduation project and serves as a portfolio piece for Front-End Developer positions.
 
